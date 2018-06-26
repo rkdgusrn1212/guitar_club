@@ -1,11 +1,15 @@
-const user = (state = [], action)=>{
+import ActionTypes from '../action/ActionTypes';
+
+const initialState= null;
+const user = (state = initialState, action)=>{
   switch(action.type){
-    case 'SIGN_IN':{
-      return [
-        ...state
-      ];
+    case ActionTypes.SIGN_UP_SUCCESS:{
+      return {
+        ...state,
+        :action.auth_id
+      };
     }
-    case 'SIGN_UP':{
+    case ActionTypes.SIGN_UP_FAIL:{
       return [
         ...state
       ];
@@ -14,6 +18,6 @@ const user = (state = [], action)=>{
       return state;
     }
   }
-}
+};
 
 export default user;
