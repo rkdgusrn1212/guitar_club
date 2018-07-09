@@ -1,5 +1,5 @@
 import * as types from './ActionTypes'
-import * as Auth from '../utils/auth'
+//import * as Auth from '../utils/auth'
 
 
 //인증상태
@@ -13,6 +13,7 @@ export const AuthState={
   UN_SIGNED:"UN_SIGNED"//인증안됨
 };
 
+/*
 export function loadUserSuccess(id,idToken){
   return {
     type:types.LOAD_USER_SUCCESS,
@@ -30,7 +31,7 @@ export function loadUserProgress(err){
 
 export function loadUserFailed(err){
   return{
-    type:types.LOAD_USER_FAILED,
+    type:types.LOAD_USER_FAIL,
     err:err
   }
 }
@@ -52,7 +53,7 @@ export function signInProgress(){
 
 export function SignInFailed(err){
   return{
-    type:types.SIGN_IN_FAILED,
+    type:types.SIGN_IN_FAIL,
     err:err
   }
 }
@@ -64,7 +65,7 @@ export function signOutSuccess(){
 }
 export function signOutFailed(err){
   return {
-    type:types.SIGN_OUT_FAILED,
+    type:types.SIGN_OUT_FAIL,
     err:err
   };
 }
@@ -109,4 +110,4 @@ export function signOut(){
       }
     })
   }
-}
+}*/

@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import {connect} from 'react-redux';
-import logo from '../logo.svg';
-import './App.css';
-import Header from './Header'
+import Header from './component/Header'
 import {BrowserRouter, Route , Switch} from 'react-router-dom'
 import {loadUser} from './action';
 import Home from './page/Home';
@@ -16,40 +14,9 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/signin" component={SignIn}/>
-          <Route exact path="/signup" component={SignUp}/>
-          <Route component={WrongURL}/>
         </Switch>
       </BrowserRouter>
     );
   }
 }
-
-/*
-유저로드와 로그아웃은 앱 내의 어느부분에서나 호출 가능하여야 한다.
-유저상태도 앱 어느부분에서나 읽을 수 있어야 한다.
-*/
-App.PropTypes = {
-  onLoadUser: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired
-}
-
-const mapStateToProps = (state)=>{
-  return{
-    user:state.user
-  };
-}
-
-
-const mapDispatchToProps = (dispatch)=>{
-  return{
-    onSignOut: ()=>{
-      dispatch(signOut());
-    },
-    onLoadUser: ()=>{
-      dispatch(loadUser());
-    }
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

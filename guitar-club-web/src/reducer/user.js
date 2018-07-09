@@ -1,4 +1,4 @@
-import ActionTypes from '../action/ActionTypes';
+import * as ActionTypes from '../action/ActionTypes';
 
 const initialState= null;
 const user = (state = initialState, action)=>{
@@ -6,7 +6,7 @@ const user = (state = initialState, action)=>{
     case ActionTypes.SIGN_UP_SUCCESS:{
       return {
         ...state,
-        :action.auth_id
+        auth_id:action.auth_id
       };
     }
     case ActionTypes.SIGN_UP_FAIL:{
