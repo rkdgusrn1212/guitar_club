@@ -24,7 +24,7 @@ const Header = ({User})=>(
     </Navbar.Brand>
   </Navbar.Header>
   <Nav>
-    <NavItem eventKey={1} href="/info">
+    <NavItem eventKey={1} href="/introduce">
       동아리 소개
     </NavItem>
     <NavItem eventKey={1} href="/master_class">
